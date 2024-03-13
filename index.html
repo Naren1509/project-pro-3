@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>project</title>
+        <script src=" https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene background="color:#FFFFFF">
+            <a-plane height="22" width="20" position="0 0 -1" rotation="-90 0 0" color="gray"></a-plane>
+            <a-plane height="10" width="20" position="0 3.7 -12" src="wall.jpg"></a-plane>
+            <a-plane height="10" width="20" position="0 3.7 -12" src="wall.jpg"></a-plane>
+            <a-plane height="10" width="20" position="0 3.7 -12" src="wall.jpg"></a-plane>
+            <a-plane height="5" width="3" position="-6 4.5 -11.97" src="poster1.png"></a-plane>
+            <a-plane height="5" width="3" position="6 4.5 -11.97" src="poster2.jpg"></a-plane>
+            <a-plane height="5" width="3" position="0 5 -11.97" src="poster3.png"></a-plane>
+            <a-asset timeout="10000">
+                <a-asset-item id="table" src="./models/table/scene.gltf"></a-asset-item>
+                <a-asset-item id="chair" src="./models/chair/scene.gltf"></a-asset-item>
+                <a-asset-item id="bed" src="./models/bed/scene.gltf"></a-asset-item>
+            </a-asset>
+
+            <a-entity>
+                <a-entity gltf-model="#table" position="-6 0 -7" rotation="0 90 0" scale="0.6 0.6 0.6" shadow="cast:true;"></a-entity>
+            </a-entity>
+
+            <a-entity>
+                <a-entity position="-1 2.5 -7" rotation="0 90 0" scale="2.5 2.5 2.5" gltf-model="#chair" shadow="cast:true;"></a-entity>
+            </a-entity>
+
+            <a-entity>
+                <a-entity position="0 1 6" rotation="0 90 0" scale="16 16 16" gltf-model="#bed" shadow="cast:true;"></a-entity>
+            </a-entity>
+
+        </a-scene>
+    </body>
+</html>
